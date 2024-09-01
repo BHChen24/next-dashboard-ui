@@ -23,12 +23,7 @@ const menuItems = [
         href: "/list/stock",
         visible: ["admin", "user"],
       },
-      {
-        icon: "/calendar.png",
-        label: "Events",
-        href: "/list/events",
-        visible: ["admin", "user"],
-      },
+
       {
         icon: "/announcement.png",
         label: "Announcements",
@@ -77,7 +72,9 @@ export default function Menu() {
               className="flex items-center justify-center lg:justify-start gap-4 text-gray-500 py-2"
             >
               <Image src={item.icon} alt="icon" width={20} height={20}></Image>
-              <span className="hidden lg:block text-gray-400">{item.label}</span>
+              <span className="hidden lg:block text-gray-400">
+                {item.label}
+              </span>
             </Link>
           ))}
         </div>

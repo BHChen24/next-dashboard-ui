@@ -1,5 +1,9 @@
+// "use client";
+import 'react-calendar/dist/Calendar.css';
 import SmallCard from "@/components/SmallCard";
-import MyPieChart from "@/components/MyPieChart"
+import EventCalendar from "@/components/EventCalendar";
+import ActiveChart from '@/components/ActiveChart'; 
+import Announcements from '@/components/Announcements';
 
 export default function admin() {
   return (
@@ -9,24 +13,24 @@ export default function admin() {
         <div className="flex gap-4 justify-between flex-wrap">
           <SmallCard type="test" />
           <SmallCard type="test" />
-          <SmallCard type="test" />
-          <SmallCard type="test" />
-        </div>
-        {/* middle chart */}
-        <div className="flex gap-4 flex-col lg:flex-row">
-          <div className="w-full lg:w-1/3 h-[450px] animate-fade-in-bottom">
-            <MyPieChart />
-          </div>
-
-          <div className="w-full lg:w-2/3 h-[450px]">
-
-          </div>
         </div>
         {/* bottom chart */}
-        <div className=""></div>
+        <div className="w-full h-[500px]" >
+          <ActiveChart></ActiveChart>  
+        </div>
       </div>
+
       {/* right */}
-      <div className="w-full lg:w-1/3">r</div>
+      <div className="w-full lg:w-1/3 flex flex-col gap-8">
+        {/* calendar */}
+        <div className="bg-white p-4 rounded-md">
+          <EventCalendar></EventCalendar>
+        </div>
+        {/* announcement */}
+        <div className="">
+          <Announcements></Announcements>
+        </div>
+      </div>
     </div>
   );
 }
