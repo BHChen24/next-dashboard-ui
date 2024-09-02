@@ -8,26 +8,26 @@ const menuItems = [
       {
         icon: "/home.png",
         label: "Home",
-        href: "/",
+        href: "/admin",
         visible: ["admin", "user"],
       },
-      {
-        icon: "/word.png",
-        label: "Word Cloud",
-        href: "/list/words",
-        visible: ["admin", "user"],
-      },
+      // {
+      //   icon: "/word.png",
+      //   label: "Word Cloud",
+      //   href: "/list/words",
+      //   visible: ["admin", "user"],
+      // },
       {
         icon: "/finance.png",
-        label: "Stock Insight",
-        href: "/list/stock",
+        label: "Index Insight",
+        href: "/indexinsight",
         visible: ["admin", "user"],
       },
 
       {
-        icon: "/announcement.png",
-        label: "Announcements",
-        href: "/list/announcements",
+        icon: "/exam.png",
+        label: "History",
+        href: "/history",
         visible: ["admin", "user"],
       },
     ],
@@ -35,12 +35,12 @@ const menuItems = [
   {
     title: "OTHER",
     items: [
-      {
-        icon: "/profile.png",
-        label: "Profile",
-        href: "/profile",
-        visible: ["admin", "user"],
-      },
+      // {
+      //   icon: "/profile.png",
+      //   label: "Profile",
+      //   href: "/profile",
+      //   visible: ["admin", "user"],
+      // },
       {
         icon: "/setting.png",
         label: "Settings",

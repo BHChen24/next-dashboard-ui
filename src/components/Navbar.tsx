@@ -13,7 +13,7 @@ export default function Navbar() {
         />
       </div>
       {/*icon and user*/}
-      <div className="flex items-center gap-7 justify-end w-full">
+      <div className="flex items-center gap-6 justify-end w-full">
         <div className="bg-white rounded-full w-7 h-7 flex items-center justify-center cursor-pointer">
           <Image src="/word.png" alt="" width={20} height={20}></Image>
         </div>
@@ -23,8 +23,8 @@ export default function Navbar() {
             1
           </div>
         </div>
-        <div className="flex flex-col">
-          <span className="text-xs leading-3 font-medium">blah</span>
+        <div className="flex flex-col mt-1">
+          <span className="text-xs leading-3 font-bold">blah blah</span>
           <span className="text-[10px] text-gray-500 text-right">admin</span>
         </div>
         <Image
@@ -32,7 +32,7 @@ export default function Navbar() {
           alt=""
           width={36}
           height={36}
-          className="rounded-full"
+          className="rounded-full cursor-pointer"
         ></Image>
       </div>
     </div>

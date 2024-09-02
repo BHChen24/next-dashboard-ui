@@ -11,6 +11,7 @@ export default function Announcements() {
                 <div className="bg-blue-200 p-4 rounded-xl">test</div>
                 <div className="bg-yellow-100 p-4 rounded-xl">test</div>
             </div>
+            <div className=""></div>
         </div>
     );
 }
