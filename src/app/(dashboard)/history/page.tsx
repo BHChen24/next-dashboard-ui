@@ -1,8 +1,39 @@
 import ListSearch from "@/components/ListSearch";
 import Pagination from "@/components/Pagination";
 import Image from "next/image";
+import ReusableList from "@/components/ReusableList";
+import Link from "next/link";
+import { role, Col, History, Columns, portfolioData } from "@/lib/data";
 
 export default function HistoryPage() {
+  const renderRow = (item: History) => (
+    <tr key={item.id} className="border-b border-gray-200 text-sm even:bg-slate-100 hover:bg-purple-100">
+      <td className="flex items-center gap-4 p-4">
+        <div className="flex flex-col">
+          <h3 className="font-semibold"> {item.name} </h3>
+          <p className="text-sm text-gray-300"> {item.instanceId} </p>
+        </div>
+      </td>
+      <td className="hidden md:table-cell"> {item.id} </td>
+      <td className="hidden md:table-cell"> {item.date} </td>
+      <td className="hidden md:table-cell"> {item.label.join(",")} </td>
+      <td>
+        <div className="flex items-center gap-2">
+          <Link href={`/list/portfolio${item.instanceId}`}>
+            <button className="w-7 h-7 flex items-center justify-center rounded-full bg-blue-100">
+              <Image src="/view.png" alt="" width={16} height={16}></Image>
+            </button>
+          </Link>
+          {role === "admin" && (
+            <button className="w-7 h-7 flex items-center justify-center rounded-full bg-purple-200">
+              <Image src="/delete.png" alt="" width={16} height={16}></Image>
+            </button>
+          )}
+        </div>
+        <div className=""></div>
+      </td>
+    </tr>
+  );
   return (
     <div className="bg-white rounded-md p-4 flex-1 m-4 mt-0">
       {/* top */}
@@ -24,7 +55,11 @@ export default function HistoryPage() {
         </div>
       </div>
       {/* list */}
-      <div className=""></div>
+      <ReusableList
+        columns={Columns}
+        data={portfolioData}
+        renderRow={renderRow}
+      />
       {/* Pagination */}
       <Pagination />
     </div>
