@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Image from "next/image";
 
 export default function Navbar() {
@@ -27,13 +28,15 @@ export default function Navbar() {
           <span className="text-xs leading-3 font-bold">blah blah</span>
           <span className="text-[10px] text-gray-500 text-right">admin</span>
         </div>
-        <Image
-          src="/avatar.png"
-          alt=""
-          width={36}
-          height={36}
-          className="rounded-full cursor-pointer"
-        ></Image>
+        <Link href="/profile">
+          <Image
+            src="/avatar.png"
+            alt=""
+            width={36}
+            height={36}
+            className="rounded-full cursor-pointer"
+          ></Image>
+        </Link>
       </div>
     </div>
   );
