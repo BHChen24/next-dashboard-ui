@@ -13,7 +13,7 @@ const Homepage = () => {
         onClick={navigateToAdmin}
         className="rounded-md border-2 border-neutral-400 px-6 py-3 hover:bg-gray-200 transition font-mono"
       >
-        To admin
+        Log in
       </button>
     </div>
   );

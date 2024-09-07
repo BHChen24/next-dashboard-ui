@@ -1,5 +1,9 @@
+import SinglePage from "@/components/SinglePage";
+
 export default function SettingPage() {
     return (
-        <div> Setting test </div>
+        <div className="flex justify-center items-center">
+            <SinglePage> </ SinglePage>
+        </div>
     );
 }
