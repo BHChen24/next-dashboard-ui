@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
+import ExampleForm from "./ExampleForm";
 
 export default function FormModal({
   table,
@@ -33,6 +34,8 @@ export default function FormModal({
           Delete
         </button>
       </form>
+    ) : type === "create" ? (
+      <ExampleForm type="create" />
     ) : (
       "Other button behaviors"
     );

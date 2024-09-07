@@ -60,7 +60,7 @@ export default function HistoryPage() {
             </div> */}
             <FormModal type="filter"></FormModal>
             <FormModal type="sort"></FormModal>
-            <FormModal type="plus"></FormModal>
+            <FormModal type="create"></FormModal>
           </div>
         </div>
       </div>
