@@ -1,9 +1,9 @@
 import SinglePage from "@/components/SinglePage";
 
-export default function StockPage() {
+export default function PortPage() {
     return (
         <div className="flex justify-center items-center">
-            <SinglePage> </ SinglePage>
+            <SinglePage> This is portfolio page. </ SinglePage>
         </div>
     );
 }

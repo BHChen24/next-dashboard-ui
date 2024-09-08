@@ -7,7 +7,7 @@ type SinglePageProps = {
 export default function SinglePage({children} : SinglePageProps) {
   return (
     <div className="rounded-xl w-[95%] h-[680px] bg-white p-6 flex items-center justify-center">
-        This is a single card page
+        
         {children}
     </div>
   );

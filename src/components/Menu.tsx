@@ -19,8 +19,8 @@ const menuItems = [
       // },
       {
         icon: "/finance.png",
-        label: "Index Insight",
-        href: "/indexinsight",
+        label: "Portfolio",
+        href: "/portfolio",
         visible: ["admin", "user"],
       },
 
@@ -50,7 +50,7 @@ const menuItems = [
       {
         icon: "/logout.png",
         label: "Logout",
-        href: "/logout",
+        href: "/",
         visible: ["admin", "user"],
       },
     ],
