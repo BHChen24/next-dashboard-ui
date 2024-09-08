@@ -69,7 +69,7 @@ export default function ActiveChart() {
     <div className="bg-white rounded-xl w-full h-full p-4">
       {/* title */}
       <div className="flex justify-between items-center">
-        <h1 className="text-lg font-semibold"> Projects </h1>
+        <h1 className="text-lg font-semibold"> Portfolios </h1>
         <Image
           src="/moreDark.png"
           alt=""

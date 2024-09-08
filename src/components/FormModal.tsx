@@ -1,7 +1,12 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
-import ExampleForm from "./ExampleForm";
+
+import dynamic from "next/dynamic";
+
+const ExampleForm = dynamic(() => import("./ExampleForm"), {
+  loading: () => <p>Loading...</p>,
+});
 
 export default function FormModal({
   table,
@@ -35,7 +40,7 @@ export default function FormModal({
         </button>
       </form>
     ) : type === "create" ? (
-      <ExampleForm type="create" />
+      <ExampleForm />
     ) : (
       "Other button behaviors"
     );
